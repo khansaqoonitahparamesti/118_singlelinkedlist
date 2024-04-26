@@ -9,3 +9,6 @@ struct node {
 	string name;
 	node* next;
 };
+
+node* START = NULL;
+
