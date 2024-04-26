@@ -125,3 +125,61 @@ void searchdata() {
 		cout << "data tidak ditemukan" << endl;
 	}
 }
+
+int main() {
+	int pilihan;
+	do {
+		try
+		{
+			cout << "1.tambah data " << endl;
+			cout << "2.hapus data " << endl;
+			cout << "3.tampilkan data " << endl;
+			cout << "4. cari data " << endl;
+			cout << "5. keluar " << endl;
+			cout << "pilihan " << endl;
+			cin >> pilihan;
+			switch (pilihan)
+			{
+				case 1:
+				addnode();
+				cout << "data berhasil ditambahkan" << endl;
+					system("pause");
+					system("cls");
+					break;
+				case 2:
+					if (listempty()) {
+						cout << "List kosong" << endl;
+						system("pause");
+						system("cls");
+						break;
+					}
+
+					int nim;
+					cout << "masukkan nim:";
+					cin >> nim;
+					if (deletenode(nim)) {
+						cout << "nim:" << nim << "berhasil dihapus" << endl;
+						system("pause");
+						system("cls");
+					}
+					else cout << "data tidak ditemukan" << endl;
+					break;
+				case 3:
+					traverse();
+					break;
+				case 4:
+					searchdata();
+					break;
+				case 5:
+					break;
+				default:
+					cout << "pilihan tidak ada" << emdl;
+					break;
+			}
+		}
+		catch (exception e) 
+		{
+			cout << "terjadi kesalahan" << endl;
+		}
+	} while (pilihan != 5);
+}
