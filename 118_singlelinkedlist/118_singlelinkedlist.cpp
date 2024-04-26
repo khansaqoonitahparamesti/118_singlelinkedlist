@@ -101,3 +101,27 @@ void traverse() {
 		}
 	}
 }
+
+void searchdata() {
+	if (listempty()) {
+		cout << "List kosong" << endl;
+		system("pause");
+		system("cls");
+		return;
+	}
+	else {
+		int nim;
+		cout << "masukkan nim:";
+		cin >> nim;
+		node* currentnode = START;
+		while (currentnode != NULL) {
+			if (currentnode->noMhs == nim) {
+				cout << "nim:" << currentnode->noMhs << ",nama:" << currentnode->name << endl;
+				return;
+
+			}
+			currentnode = currentnode->next;
+		}
+		cout << "data tidak ditemukan" << endl;
+	}
+}
