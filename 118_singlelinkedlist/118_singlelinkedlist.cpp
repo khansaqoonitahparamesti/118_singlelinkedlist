@@ -48,4 +48,21 @@ void addnode() {
 bool serachnode(int nim, node* current, node* previous) {
 	previous = START;
 	current = START;
+	while (current != NULL && nim > current->noMhs)
+	{
+		previous = current;
+		current = current->next;
+	}
+	if (current == NULL) 
+	{
+		return false;
+	}
+	else if (current->noMhs == nim) 
+	{
+		return false;
+	}
+	else 
+	{
+		return false;
+	}
 }
