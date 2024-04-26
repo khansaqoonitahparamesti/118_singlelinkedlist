@@ -45,3 +45,7 @@ void addnode() {
 	}
 }
 
+bool serachnode(int nim, node* current, node* previous) {
+	previous = START;
+	current = START;
+}
