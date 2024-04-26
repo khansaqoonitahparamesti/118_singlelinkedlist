@@ -87,5 +87,10 @@ bool listempty() {
 }
 
 void traverse() {
-	
+	if (listempty()) {
+		cout << "List kosong" << endl;
+		system("pause");
+		system("cls");
+		return;
+	}
 }
